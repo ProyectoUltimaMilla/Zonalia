@@ -8,7 +8,7 @@ Plataforma para organizar la última milla de un centro de distribución local e
 
 | Componente | Tecnología |
 | --- | --- |
-| Aplicación (Android, web y Linux) | Flutter / Dart |
+| Aplicación (Android, web y escritorio) | Flutter / Dart |
 | Servicios y API REST | Python 3.12, FastAPI, pandas, Matplotlib |
 | Base relacional distribuida | PostgreSQL 16 (fragmentación por zona y replicación primario-secundario) |
 | Base analítica | MongoDB 7 |

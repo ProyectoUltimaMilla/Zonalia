@@ -61,3 +61,31 @@ IA: asistido
 | `ia-decision-equipo` | Fragmentación, shard key, postura CAP, distribución de nodos, análisis de riesgos, marco legal | Lo decide y escribe el equipo; la IA solo puede listar alternativas |
 
 Está prohibido compartir con una IA datos personales reales, contraseñas, llaves o certificados del proyecto.
+
+## Dónde va cada cosa
+
+| Qué entregas | Dónde va | Cómo se llena |
+| --- | --- | --- |
+| Código Python | `servicios/` | [servicios/README.md](servicios/README.md) |
+| App Flutter | `app/` | [app/README.md](app/README.md) |
+| SQL de PostgreSQL | `db/` | [db/README.md](db/README.md) |
+| Nginx, VPN, firewall, IDS | `infra/` | [infra/README.md](infra/README.md) |
+| Uso de IA | `docs/bitacora-ia.md` | Instrucciones al inicio del archivo |
+| Decisiones de diseño | `docs/decisiones/` | [docs/decisiones/README.md](docs/decisiones/README.md) |
+| Documentos de base de datos | `docs/bd/` | [docs/bd/README.md](docs/bd/README.md) |
+| Documentos de seguridad | `docs/seguridad/` | [docs/seguridad/README.md](docs/seguridad/README.md) |
+| Capturas y videos | `docs/evidencias/` | [docs/evidencias/README.md](docs/evidencias/README.md) |
+| Variables y contraseñas | `.env` (local, nunca se sube) | Copia `.env.example` y llénalo |
+
+Cada carpeta dice qué documento va, quién lo hace y en qué issue. Si algo no encaja en ninguna, pregunta al coordinador antes de crear carpetas nuevas.
+
+## Si trabajas con un asistente de IA
+
+Pídele a tu asistente que lea este archivo, el README de la carpeta donde vas a trabajar y tu issue antes de empezar. Reglas para ti y para él:
+
+- Trabaja solo en la rama de tu issue (`tipo/N-tema`, viene en el issue). Nunca en `main`.
+- No crees carpetas ni archivos fuera de lo que pide el issue y el README de la carpeta.
+- No agregues coautores de IA ni firmas automáticas al commit o al PR (`Co-Authored-By`, "Generated with…"). El uso de IA se declara solo con la línea `IA: asistido` o `IA: generado y revisado` y con tu fila en la bitácora.
+- Nunca pegues en la IA contraseñas, llaves, certificados, el contenido de `.env` ni datos reales (5.2).
+- Las decisiones de diseño y las conclusiones las escribes tú (5.2). La IA solo puede proponer alternativas.
+- Antes de pedir revisión, tienes que poder explicar tu cambio sin la IA: el profesor elige commits al azar (5.4).

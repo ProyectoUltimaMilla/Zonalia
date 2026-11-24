@@ -28,7 +28,7 @@ body:
     id: plataforma
     attributes:
       label: Dónde ocurre
-      placeholder: Android / web / Linux / API / nodo N2
+      placeholder: Android / web / escritorio / API / nodo N2
   - type: textarea
     id: terminado
     attributes:
