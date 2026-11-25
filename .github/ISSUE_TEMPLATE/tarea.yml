@@ -1,0 +1,42 @@
+name: Tarea
+description: Funcionalidad, configuración, documentación o pruebas planeadas
+title: "[Tarea] "
+body:
+  - type: textarea
+    id: descripcion
+    attributes:
+      label: Qué se hace
+      description: Explicación del trabajo solicitado.
+    validations:
+      required: true
+  - type: textarea
+    id: terminado
+    attributes:
+      label: Terminado cuando
+      description: Criterios verificables, uno por línea.
+      value: |
+        - [ ] 
+    validations:
+      required: true
+  - type: input
+    id: responsable
+    attributes:
+      label: Responsable y revisor
+      placeholder: "Responsable: Jesús · Revisa: Arturo"
+    validations:
+      required: true
+  - type: dropdown
+    id: ia
+    attributes:
+      label: Nivel de IA permitido (apartado 5.2)
+      options:
+        - Libre
+        - Con verificación
+        - Decisión del equipo (la IA solo da alternativas)
+    validations:
+      required: true
+  - type: input
+    id: rama
+    attributes:
+      label: Rama sugerida
+      placeholder: feature/00-descripcion

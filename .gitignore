@@ -1,0 +1,40 @@
+# Secretos y llaves: nunca al repositorio
+.env
+*.pem
+*.key
+*.crt
+*.p12
+*.jks
+*.keystore
+wg*.conf
+infra/vpn/*.conf
+id_*
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+*.egg-info/
+
+# Flutter / Dart
+app/.dart_tool/
+app/build/
+app/.flutter-plugins
+app/.flutter-plugins-dependencies
+app/android/local.properties
+app/android/key.properties
+
+# Datos generados (se regeneran con el generador y semilla fija)
+servicios/salida/
+*.dump
+respaldos/
+
+# Editores y sistema
+.idea/
+.vscode/
+.DS_Store

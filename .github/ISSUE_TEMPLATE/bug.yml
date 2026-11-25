@@ -1,0 +1,38 @@
+name: Error
+description: Algo no funciona como debería
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: pasos
+    attributes:
+      label: Pasos para reproducirlo
+      value: |
+        1. 
+    validations:
+      required: true
+  - type: textarea
+    id: esperado
+    attributes:
+      label: Qué esperaba
+    validations:
+      required: true
+  - type: textarea
+    id: obtenido
+    attributes:
+      label: Qué pasó
+      description: Incluye el mensaje de error o una captura. Nunca pegues contraseñas, llaves ni datos reales.
+    validations:
+      required: true
+  - type: input
+    id: plataforma
+    attributes:
+      label: Dónde ocurre
+      placeholder: Android / web / escritorio / API / nodo N2
+  - type: textarea
+    id: terminado
+    attributes:
+      label: Terminado cuando
+      value: |
+        - [ ] El error ya no se reproduce con los pasos de arriba
+        - [ ] Hay una prueba que lo cubre
