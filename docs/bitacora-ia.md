@@ -26,6 +26,7 @@ Ejemplo:
 | --- | --- | --- | --- | --- | --- | --- |
 | 2026-11-25 | Nombre | Asistente usado | #13: función para validar el token JWT (con verificación) | Se aceptó la estructura; se cambió el tiempo de expiración a 8 h | `pytest tests/test_auth.py` en verde y revisión de Hugo | a1b2c3d |
 
+
 ## Registro
 
 El commit es el hash del commit en la rama (se conserva porque integramos con merge commit).
@@ -34,3 +35,9 @@ El commit es el hash del commit en la rama (se conserva porque integramos con me
 | --- | --- | --- | --- | --- | --- | --- |
 | 2026-11-23 | Arturo | Claude | #1: plantillas de issue y PR, README base, CONTRIBUTING, estructura del repositorio y guías de llenado de cada carpeta (nivel libre) | Se aceptaron con ajustes de Arturo a textos y nombres | Revisión de Arturo contra los lineamientos y de Jesús en el PR de cimientos | d22699a |
 | 2026-11-23 | Arturo | Claude | Plan de trabajo, lista de 56 issues y script para crearlos en GitHub (nivel libre: configuración inicial) | Se aceptó el plan después de ajustar el calendario; los issues se crearon tal como están en el plan | Revisión de Arturo de cada issue y verificación de que los números coinciden con el plan | No aplica (configuración en GitHub) |
+| 2026-11-25 | Hugo | ChatGPT | Orientación para identificar activos y definir la escala de riesgos CIA | Asistencia en la estructura del documento y descripción de los activos | Pendiente de revisión por Arturo | 1b7ec58 |
+| 2026-11-25 | Hugo | ChatGPT | Análisis de amenazas y riesgos de seguridad | Propuesta de riesgos R01 a R05, niveles y defensas | Cálculos comprobados sobre el borrador | 1b99830 |
+| 2026-11-25 | Hugo | ChatGPT | Análisis de amenazas y riesgos de seguridad | Propuesta de riesgos R06 a R10, niveles y defensas | Cálculos comprobados sobre el borrador | 3050543 |
+| 2026-11-25 | Hugo | ChatGPT | Análisis de amenazas y riesgos asociados a IA | Propuesta de riesgos R11 a R15, niveles y defensas | Cálculos comprobados sobre el borrador | 86ca4b7 |
+| 2026-11-25 | Hugo | ChatGPT | Orientación sobre riesgos de IA, resumen por pilar y riesgos aceptados | Propuesta de interpretación de los resultados y redacción de riesgos aceptados | Pendiente de revisión por Arturo | eb149c0 |
+| 2026-11-25 | Hugo | ChatGPT | Verificación del Issue #10 | Comprobación matemática del borrador, criterios de aceptación y revisión del estado de Git | Historial de commits y estado limpio del repositorio comprobados; revisión del documento definitivo pendiente | 2e525e6 |
