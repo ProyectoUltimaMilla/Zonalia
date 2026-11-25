@@ -40,8 +40,7 @@ Probabilidad e impacto de 1 a 3. **Nivel = probabilidad × impacto.**
 | Medio | 3 a 4 | Implementar una defensa si el calendario lo permite. |
 | Alto | 6 a 9 | Implementar una defensa obligatoriamente en esta versión. |
 
-## 3. Tabla de riesgos
-## 3. Tabla de riesgos
+
 ## 3. Tabla de riesgos
 
 | ID | Activo | Pilar | Vulnerabilidad | Amenaza | Prob. | Impacto | Nivel | Defensa | Issue |
@@ -72,15 +71,31 @@ Probabilidad e impacto de 1 a 3. **Nivel = probabilidad × impacto.**
 
 | R15 | A12 | C | Inclusión de secretos o datos sensibles en consultas a herramientas de IA | Divulgación de credenciales o información confidencial | 2 | 3 | 6 alto | Uso exclusivo de datos sintéticos y prohibición de compartir secretos con IA según CONTRIBUTING.md | #6 |
 
+| R16 |   A12   | Integridad | Incorporación de código generado por IA sin revisión humana. | Introducción de código con vulnerabilidades de seguridad. | Por determinar. | Por determinar | --- | 	Revisión obligatoria mediante PR y análisis estático con Bandit. | 8 |
 
 ## 4. La IA como factor de riesgo
+El uso de herramientas de inteligencia artificial durante el desarrollo de Zonalia puede representar riesgos para la seguridad, la calidad y la confidencialidad del sistema y de su código fuente.
+
+Los principales escenarios identificados son la generación de código inseguro o con licencias incompatibles, y la exposición de información sensible o propietaria en las consultas realizadas a herramientas de IA, correspondientes a los riesgos R14 y R15 de la tabla de riesgos.
+
+Para reducir estos riesgos, el equipo contempla el uso de herramientas de IA aprobadas, la revisión obligatoria del código generado, la anonimización de datos antes de enviarlos a servicios externos y la documentación del origen de las sugerencias utilizadas.
+
+El código y las sugerencias proporcionadas por IA deberán ser revisados, validados y probados por un miembro del equipo antes de integrarse al repositorio, respetando las reglas establecidas en CONTRIBUTING.md.
 
 ## 5. Resumen por pilar
 
 ### Confidencialidad
+El riesgo de mayor nivel en este pilar es R02, con una puntuación de 9 (alto). Si un atacante roba credenciales, [consecuencia concreta: qué datos o sistemas quedan expuestos]. La probabilidad asignada es [valor] porque [razón], y el impacto es [valor] porque [razón]. Los controles del Issue #13 reducen esta exposición al [cómo lo reducen].
 
 ### Integridad
+El riesgo de mayor nivel en este pilar es R04, con una puntuación de 9 (alto). Una inyección SQL o NoSQL permitiría [consecuencia concreta: qué datos se leerían o alterarían]. La probabilidad asignada es [valor] porque [razón], y el impacto es [valor] porque [razón]. Los controles del Issue #37 mitigan el riesgo al [cómo lo mitigan].
 
 ### Disponibilidad
+El riesgo R03 es uno de los de mayor nivel en este pilar, con una puntuación de 6 (alto). Si el servidor primario falla, [consecuencia concreta: tiempo fuera de servicio y efecto en usuarios]. La probabilidad asignada es [valor] porque [razón], y el impacto es [valor] porque [razón]. La defensa del Issue #25 reduce el efecto de una caída al [cómo lo reduce].
 
 ## 6. Riesgos aceptados
+El análisis no identificó riesgos de nivel bajo que el equipo pueda aceptar sin aplicar medidas de seguridad. De los 15 riesgos identificados, 11 son altos y 4 son medios.
+
+Los riesgos altos tienen prioridad de tratamiento por su impacto potencial sobre la confidencialidad, la integridad y la disponibilidad de Zonalia. Los riesgos medios se atenderán según el calendario de desarrollo del proyecto.
+
+Una vez implementadas y verificadas las defensas, el equipo hará una nueva evaluación para determinar si los riesgos residuales pueden aceptarse.
