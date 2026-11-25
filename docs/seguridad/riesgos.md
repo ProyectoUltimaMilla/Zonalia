@@ -41,9 +41,16 @@ Probabilidad e impacto de 1 a 3. **Nivel = probabilidad × impacto.**
 | Alto | 6 a 9 | Implementar una defensa obligatoriamente en esta versión. |
 
 ## 3. Tabla de riesgos
+## 3. Tabla de riesgos
+## 3. Tabla de riesgos
 
 | ID | Activo | Pilar | Vulnerabilidad | Amenaza | Prob. | Impacto | Nivel | Defensa | Issue |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| R01 | A01 | C | Almacenamiento de datos personales sin cifrado | Extracción no autorizada de información de destinatarios | 2 | 3 | 6 alto | Cifrado en reposo y enmascaramiento de datos | #33 |
+| R02 | A02 | C | Protección insuficiente de contraseñas y tokens de sesión | Robo de credenciales y suplantación de usuarios | 3 | 3 | 9 alto | Hash seguro de contraseñas, JWT con expiración y control de roles | #13 |
+| R03 | A03 | D | Dependencia del nodo primario sin conmutación por falla | Caída del servidor PostgreSQL durante la jornada de reparto | 2 | 3 | 6 alto | Prueba de falla y promoción de la réplica como nuevo primario | #25 |
+| R04 | A05 | I | Validación insuficiente de las entradas de la API | Inyección SQL o NoSQL para modificar registros | 3 | 3 | 9 alto | Validación de entradas, consultas parametrizadas y pruebas de inyección | #37 |
+| R05 | A07 | I | Ausencia de mecanismos de verificación de integridad | Manipulación de fotografías y evidencias de entrega | 2 | 2 | 4 medio | Firma digital de evidencias de entrega | #27 |
 
 ## 4. La IA como factor de riesgo
 
