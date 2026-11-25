@@ -64,6 +64,14 @@ Probabilidad e impacto de 1 a 3. **Nivel = probabilidad × impacto.**
 
 | R11 | A05 | D | Monitoreo insuficiente del tráfico de red | Saturación de los servicios mediante tráfico malicioso | 2 | 3 | 6 alto | Detección de intrusiones mediante Suricata y respuesta ante alertas | #24 |
 
+| R12 | A11 | C | Exposición innecesaria de servicios y puertos de administración | Acceso no autorizado a información almacenada en los nodos | 2 | 3 | 6 alto | Firewall, autenticación SSH con llaves y hardening | #34 |
+
+| R13 | A05 | I | Vulnerabilidades de autorización no identificadas | Modificación de paquetes por usuarios sin los permisos correspondientes | 2 | 2 | 4 medio | Pruebas de hackeo ético y corrección de vulnerabilidades identificadas | #47 |
+
+| R14 | A12 | I | Incorporación de dependencias sugeridas por IA sin verificar su procedencia | Introducción de paquetes maliciosos al proyecto | 1 | 3 | 3 medio | Verificación de dependencias en PyPI y auditoría mediante pip-audit | #48 |
+
+| R15 | A12 | C | Inclusión de secretos o datos sensibles en consultas a herramientas de IA | Divulgación de credenciales o información confidencial | 2 | 3 | 6 alto | Uso exclusivo de datos sintéticos y prohibición de compartir secretos con IA según CONTRIBUTING.md | #6 |
+
 
 ## 4. La IA como factor de riesgo
 
