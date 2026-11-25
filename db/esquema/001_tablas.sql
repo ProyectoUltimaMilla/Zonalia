@@ -16,7 +16,7 @@ CREATE TABLE colonia (
     nombre             text     NOT NULL,
     tipo_asentamiento  text     NOT NULL,
     zona_id            smallint NOT NULL REFERENCES zona (zona_id),
-    UNIQUE (codigo_postal, nombre),
+    UNIQUE (codigo_postal, nombre, tipo_asentamiento),   -- SEPOMEX repite nombres en un CP con distinto tipo,
     UNIQUE (colonia_id, zona_id)                      -- permite la llave foránea compuesta desde paquete
 );
 
