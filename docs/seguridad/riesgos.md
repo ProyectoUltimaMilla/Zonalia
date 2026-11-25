@@ -50,27 +50,16 @@ Probabilidad e impacto de 1 a 3. **Nivel = probabilidad × impacto.**
 | R03 | A03 | D | Dependencia del nodo primario sin conmutación por falla | Caída del servidor PostgreSQL durante la jornada de reparto | 2 | 3 | 6 alto | Prueba de falla y promoción de la réplica como nuevo primario | #25 |
 | R04 | A05 | I | Validación insuficiente de las entradas de la API | Inyección SQL o NoSQL para modificar registros | 3 | 3 | 9 alto | Validación de entradas, consultas parametrizadas y pruebas de inyección | #37 |
 | R05 | A07 | I | Ausencia de mecanismos de verificación de integridad | Manipulación de fotografías y evidencias de entrega | 2 | 2 | 4 medio | Firma digital de evidencias de entrega | #27 |
-
 | R06 | A09 | C | Almacenamiento de llaves y secretos dentro del código fuente | Obtención de credenciales y llaves privadas por terceros | 2 | 3 | 6 alto | Gestión de secretos fuera del código fuente | #6 |
-
 | R07 | A10 | C | Comunicación entre nodos sin protección suficiente | Interceptación del tráfico de red por terceros | 2 | 3 | 6 alto | Comunicación mediante VPN WireGuard | #18 |
-
 | R08 | A11 | D | Dependencia de equipos físicos sin respaldos recuperables | Daño físico o falla de una laptop que funciona como nodo | 2 | 3 | 6 alto | Respaldos periódicos y pruebas de recuperación | #39 |
-
 | R09 | A05 | C | Comunicación entre cliente y servidor sin cifrado | Interceptación de información y tokens durante su transmisión | 2 | 3 | 6 alto | Implementación de HTTPS con TLS | #26 |
-
 | R10 | A05 | I | Registro insuficiente de accesos y operaciones | Modificación no autorizada de registros sin trazabilidad | 2 | 2 | 4 medio | Bitácora de accesos y revisión de operaciones | #16 |
-
 | R11 | A05 | D | Monitoreo insuficiente del tráfico de red | Saturación de los servicios mediante tráfico malicioso | 2 | 3 | 6 alto | Detección de intrusiones mediante Suricata y respuesta ante alertas | #24 |
-
 | R12 | A11 | C | Exposición innecesaria de servicios y puertos de administración | Acceso no autorizado a información almacenada en los nodos | 2 | 3 | 6 alto | Firewall, autenticación SSH con llaves y hardening | #34 |
-
 | R13 | A05 | I | Vulnerabilidades de autorización no identificadas | Modificación de paquetes por usuarios sin los permisos correspondientes | 2 | 2 | 4 medio | Pruebas de hackeo ético y corrección de vulnerabilidades identificadas | #47 |
-
 | R14 | A12 | I | Incorporación de dependencias sugeridas por IA sin verificar su procedencia | Introducción de paquetes maliciosos al proyecto | 1 | 3 | 3 medio | Verificación de dependencias en PyPI y auditoría mediante pip-audit | #48 |
-
 | R15 | A12 | C | Inclusión de secretos o datos sensibles en consultas a herramientas de IA | Divulgación de credenciales o información confidencial | 2 | 3 | 6 alto | Uso exclusivo de datos sintéticos y prohibición de compartir secretos con IA según CONTRIBUTING.md | #6 |
-
 | R16 |   A12   | Integridad | Incorporación de código generado por IA sin revisión humana. | Introducción de código con vulnerabilidades de seguridad. | Por determinar. | Por determinar | --- | 	Revisión obligatoria mediante PR y análisis estático con Bandit. | 8 |
 
 ## 4. La IA como factor de riesgo
