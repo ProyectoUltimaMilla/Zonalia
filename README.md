@@ -51,6 +51,8 @@ Cada integrante es responsable principal de un componente, que defiende de forma
 | Integrante | Usuario de GitHub | Componente principal |
 | --- | --- | --- |
 | José Arturo Picazo Zaragoza | @PicazoArturo | Base de datos distribuida e infraestructura; coordinación del proyecto |
+| Hugo Vázquez Hernandez | @Huguiti080 | Auditoría y detección de intrusos |
+
 
 _Jesús, Hugo y Tadeo agregan su fila en los issues #2, #3 y #4._
 
