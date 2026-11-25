@@ -52,6 +52,19 @@ Probabilidad e impacto de 1 a 3. **Nivel = probabilidad × impacto.**
 | R04 | A05 | I | Validación insuficiente de las entradas de la API | Inyección SQL o NoSQL para modificar registros | 3 | 3 | 9 alto | Validación de entradas, consultas parametrizadas y pruebas de inyección | #37 |
 | R05 | A07 | I | Ausencia de mecanismos de verificación de integridad | Manipulación de fotografías y evidencias de entrega | 2 | 2 | 4 medio | Firma digital de evidencias de entrega | #27 |
 
+| R06 | A09 | C | Almacenamiento de llaves y secretos dentro del código fuente | Obtención de credenciales y llaves privadas por terceros | 2 | 3 | 6 alto | Gestión de secretos fuera del código fuente | #6 |
+
+| R07 | A10 | C | Comunicación entre nodos sin protección suficiente | Interceptación del tráfico de red por terceros | 2 | 3 | 6 alto | Comunicación mediante VPN WireGuard | #18 |
+
+| R08 | A11 | D | Dependencia de equipos físicos sin respaldos recuperables | Daño físico o falla de una laptop que funciona como nodo | 2 | 3 | 6 alto | Respaldos periódicos y pruebas de recuperación | #39 |
+
+| R09 | A05 | C | Comunicación entre cliente y servidor sin cifrado | Interceptación de información y tokens durante su transmisión | 2 | 3 | 6 alto | Implementación de HTTPS con TLS | #26 |
+
+| R10 | A05 | I | Registro insuficiente de accesos y operaciones | Modificación no autorizada de registros sin trazabilidad | 2 | 2 | 4 medio | Bitácora de accesos y revisión de operaciones | #16 |
+
+| R11 | A05 | D | Monitoreo insuficiente del tráfico de red | Saturación de los servicios mediante tráfico malicioso | 2 | 3 | 6 alto | Detección de intrusiones mediante Suricata y respuesta ante alertas | #24 |
+
+
 ## 4. La IA como factor de riesgo
 
 ## 5. Resumen por pilar
