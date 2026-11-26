@@ -17,6 +17,7 @@ Closes #
 - [ ] No se usó IA
 - [ ] Se usó IA (nivel libre) y la entrada está en `docs/bitacora-ia.md`
 - [ ] Se usó IA (nivel con verificación): entrada en la bitácora + pruebas que lo respaldan
+- [ ] Decisión del equipo: la IA solo dio alternativas; la decisión y la redacción son del equipo
 
 ## Antes de pedir revisión
 
