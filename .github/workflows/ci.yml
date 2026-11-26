@@ -41,6 +41,7 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           channel: stable
+          flutter-version: 3.47.1
       - name: Dependencias
         run: flutter pub get
       - name: Análisis estático
