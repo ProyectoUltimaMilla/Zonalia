@@ -1,6 +1,6 @@
 # Análisis de riesgos de Zonalia
 
-Análisis de confidencialidad (C), integridad (I) y disponibilidad (D) del sistema. Parte de la tabla de riesgos de la propuesta de la primera entrega y la amplía. Lo elaboró Hugo Vázquez Hernandez y lo revisó el equipo.
+Análisis de confidencialidad (C), integridad (I) y disponibilidad (D) del sistema. Parte de la tabla de riesgos de la propuesta de la primera entrega y la amplía. Lo elaboró Hugo Vázquez Hernández y lo revisó el equipo.
 
 Fecha: 2026-11-25
 
@@ -10,19 +10,19 @@ Lo que hay que proteger y por qué importa.
 
 | ID | Activo | Dónde vive | Por qué importa |
 | --- | --- | --- | --- |
-| A01 | Datos de destinatarios (nombre, teléfono, dirección) | N2, N3 | Son una necesidad para identificar y localizar a los destinatarios. Su exposicion podria provocar suplantación de identidad, fraude o vulneración para la información de los clientes |
-| A02 | Contraseñas y tokens de sesión | N2, app |Permiten autenticar a los usuarios del sistema. Si alguien obtiene acceso indebido a ellos, podria acceder a cuentas ajenas, realizar operaciones no autorizadas.  |
-| A03 | Base de datos primaria | N2 | Almacena la información necesaria para la operación del reparto. Su perdida o alteración ocasionaria la interrupcion del servicio, errores en las entregas y perdida de información critica |
-| A04 | Réplica de la base de datos | N3 |  Tendremos una copia de la información del nodo primario. Su falla afectaria la disponibilidad del sistema y la capacidad de recuperacion ante desastres|
+| A01 | Datos de destinatarios (nombre, teléfono, dirección) | N2, N3 | Son necesarios para identificar y localizar a los destinatarios. Su exposición podría provocar suplantación de identidad, fraude o vulneración de la información de los clientes. |
+| A02 | Contraseñas y tokens de sesión | N2, app | Permiten autenticar a los usuarios. Si alguien los obtiene, podría acceder a cuentas ajenas y realizar operaciones no autorizadas. |
+| A03 | Base de datos primaria | N2 | Almacena la información necesaria para la operación del reparto. Su pérdida o alteración interrumpiría el servicio, causaría errores en las entregas y provocaría pérdida de información crítica. |
+| A04 | Réplica de la base de datos | N3 | Es una copia de la información del nodo primario. Su falla afectaría la disponibilidad del sistema y la capacidad de recuperación ante desastres. |
 | A05 | API REST | N1 | Permite la comunicación entre la aplicación y los servicios del sistema. Si deja de funcionar, el supervisor no puede asignar paquetes y el repartidor no puede consultar su ruta ni confirmar entregas. |
-| A06 | Base analítica | N4 |Almacena informacion para generar reportes y monitorear el sistema. La alteracion de sus datos podria ocasionar, decisiones erroneas, reportes inexactos y perdida de confianza en la operación.|
-| A07 | Evidencias de entrega (foto y ubicación) | N2, app | Permiten comporbar que los paquetes fueron entregados. Su perdida o modificacion podria generar disputas con los clientes, fraudes en las entregas y dificultades para resolver reclamos |
-| A08 | Manifiestos de paquetes (CSV o JSON) | N1 |Contienen informacion de los paquetes que deben procesarse. Los errores en estos archivos podrian provocar entregas a destinos incorrectos  |
-| A09 | Llaves y certificados (TLS, firma, SSH) | Todos los nodos | Permiten establecer comunicaciones, seguras, autenticar componentes y realizar firmas digitales. si se coompormeten, podria ocurrir intercepcion de comunicaciones, suplantacion de nodos y falsificacion de documentos o transacciones. |
-| A10 | VPN entre nodos | Todos los nodos | Permite la comunicación segura entre los nodos del sistema distribuido. Su interrupcion afectaria la sincronizacion entre nodos por lo tanto la disponibilidad del servicio y la seguridad de las comunicaciones |
-| A11 | Laptops que funcionan como nodos | Físicas | El daño al equipo provocaria la caida parcial del sistema, perdidad de datos tanto locales y retrassos en la operación del reparto |
-| A12 | Repositorio en GitHub | GitHub | Almacena el codigo fuente, la documentación y el historial del proyecto. Una modificacion no autorizada podria ocasionar la introduccion de codigo malicioso |
-| A13 | Ubicación en tiempo real del repartidor | App, N2 | La ubicacion y el seguimiento de los repartidores es importante de no tener una exposicion o alteracio ya que afecta la privacidad y segurdidad de los repartidores, asi como la precision de la asignación de entregas.|
+| A06 | Base analítica | N4 | Almacena información para generar reportes y monitorear el sistema. Su alteración podría causar decisiones erróneas, reportes inexactos y pérdida de confianza en la operación. |
+| A07 | Evidencias de entrega (foto y ubicación) | N2, app | Permiten comprobar que los paquetes fueron entregados. Su pérdida o modificación podría generar disputas con clientes, fraudes y dificultades para resolver reclamos. |
+| A08 | Manifiestos de paquetes (CSV o JSON) | N1 | Contienen la información de los paquetes que deben procesarse. Los errores en estos archivos podrían provocar entregas a destinos incorrectos. |
+| A09 | Llaves y certificados (TLS, firma, SSH) | Todos los nodos | Permiten establecer comunicaciones seguras, autenticar componentes y realizar firmas digitales. Si se comprometen, podría haber intercepción de comunicaciones, suplantación de nodos y falsificación de documentos. |
+| A10 | VPN entre nodos | Todos los nodos | Permite la comunicación segura entre los nodos del sistema distribuido. Su interrupción afectaría la sincronización entre nodos, la disponibilidad del servicio y la seguridad de las comunicaciones. |
+| A11 | Laptops que funcionan como nodos | Físicas | Un daño al equipo provocaría la caída parcial del sistema, pérdida de datos locales y retrasos en la operación del reparto. |
+| A12 | Repositorio en GitHub | GitHub | Almacena el código fuente, la documentación y el historial del proyecto. Una modificación no autorizada podría introducir código malicioso. |
+| A13 | Ubicación en tiempo real del repartidor | App, N2 | Su exposición o alteración afecta la privacidad y la seguridad de los repartidores, así como la precisión de la asignación de entregas. |
 
 ## 2. Escala
 
@@ -30,8 +30,8 @@ Probabilidad e impacto de 1 a 3. **Nivel = probabilidad × impacto.**
 
 | Valor | Probabilidad | Impacto |
 | --- | --- | --- |
-| 1 |Requiere conocimientos avanzados y acceso considerable.  | Afectación menor que puede solucionarse rápidamente. |
-| 2 | Puede ocurrir por conocimientos intermedios o errores comunes.| Afecta la operación de un día o a varios clientes. |
+| 1 | Requiere conocimientos avanzados y acceso considerable. | Afectación menor que puede solucionarse rápidamente. |
+| 2 | Puede ocurrir por conocimientos intermedios o errores comunes. | Afecta la operación de un día o a varios clientes. |
 | 3 | Puede ocurrir fácilmente o existen antecedentes en sistemas similares. | Expone datos personales o detiene la operación de reparto. |
 
 | Nivel | Rango | Qué hacemos |
@@ -39,7 +39,6 @@ Probabilidad e impacto de 1 a 3. **Nivel = probabilidad × impacto.**
 | Bajo | 1 a 2 | Aceptar y documentar el riesgo. |
 | Medio | 3 a 4 | Implementar una defensa si el calendario lo permite. |
 | Alto | 6 a 9 | Implementar una defensa obligatoriamente en esta versión. |
-
 
 ## 3. Tabla de riesgos
 
@@ -63,37 +62,31 @@ Probabilidad e impacto de 1 a 3. **Nivel = probabilidad × impacto.**
 | R16 | A12 | I | Incorporación de código generado por IA sin revisión humana | Introducción de código con vulnerabilidades de seguridad | 2 | 3 | 6 alto | Revisión obligatoria mediante PR y análisis estático con Bandit | #8 |
 
 ## 4. La IA como factor de riesgo
-El uso de herramientas de inteligencia artificial durante el desarrollo de Zonalia puede representar riesgos para la seguridad, la calidad y la confidencialidad del sistema y de su código fuente.
 
-Los principales escenarios identificados son la generación de código inseguro o con licencias incompatibles, y la exposición de información sensible o propietaria en las consultas realizadas a herramientas de IA, correspondientes a los riesgos  R16, R14 y R15 de la tabla de riesgos.
+El uso de herramientas de inteligencia artificial durante el desarrollo de Zonalia puede afectar la seguridad, la calidad y la confidencialidad del sistema y de su código fuente.
 
-Para reducir estos riesgos, el equipo contempla el uso de herramientas de IA aprobadas, la revisión obligatoria del código generado, la anonimización de datos antes de enviarlos a servicios externos y la documentación del origen de las sugerencias utilizadas.
+Los principales escenarios son la generación de código inseguro o con licencias incompatibles, y la exposición de información sensible o propietaria en las consultas a herramientas de IA. Corresponden a los riesgos R16, R14 y R15.
 
-El código y las sugerencias proporcionadas por IA deberán ser revisados, validados y probados por un miembro del equipo antes de integrarse al repositorio, respetando las reglas establecidas en CONTRIBUTING.md.
+Para reducir estos riesgos, el equipo contempla usar sólo herramientas de IA aprobadas, revisar obligatoriamente el código generado, anonimizar los datos antes de enviarlos a servicios externos y documentar el origen de las sugerencias utilizadas.
+
+El código y las sugerencias generados con IA deben ser revisados, validados y probados por un miembro del equipo antes de integrarse al repositorio, según las reglas de CONTRIBUTING.md.
 
 ## 5. Resumen por pilar
-Los riesgos de confidencialidad (R02) e integridad (R04) son los de mayor nivel, con 9 cada uno. Ambos tienen probabilidad 3 e impacto 3. El de disponibilidad (R03) queda en 6, con probabilidad 2 e impacto 3.
 
-En confidencialidad, la consecuencia principal es el robo de cuentas y de datos personales. La defensa planteada combina Argon2 para el almacenamiento de contraseñas, JWT y un esquema de roles. Esto se vincula con el issue #13.
+Los riesgos de confidencialidad (R02) e integridad (R04) tienen el nivel más alto, 9 cada uno, con probabilidad 3 e impacto 3. El de disponibilidad (R03) queda en 6, con probabilidad 2 e impacto 3.
+
+En confidencialidad, la consecuencia principal es el robo de cuentas y de datos personales. La defensa combina Argon2 para el almacenamiento de contraseñas, JWT y un esquema de roles, y se vincula con el issue #13.
 
 En integridad, el riesgo es la alteración de paquetes, rutas y entregas. Se propone validar las entradas y usar consultas parametrizadas, lo que se rastrea en el issue #37.
 
-En disponibilidad, el riesgo es la interrupción de asignaciones y consultas. La medida es promover la réplica, documentada en el issue #25. Todavía no hay mediciones de tiempo de recuperación, así que no conviene citar ninguna cifra hasta que se midan.
+En disponibilidad, el riesgo es la interrupción de asignaciones y consultas. La medida es promover la réplica, documentada en el issue #25. Todavía no hay mediciones de tiempo de recuperación, así que no conviene citar ninguna cifra hasta medirla.
 
-Como la matriz asigna el mismo impacto a los tres riesgos, la priorización depende sobre todo de la probabilidad. Por eso los dos riesgos de nivel 9 son los que deberían atenderse primero. Antes de cerrar el análisis, el equipo debería confirmar que estas conclusiones coinciden con su criterio.
-
-### Confidencialidad
-El riesgo de mayor nivel en este pilar es R02, con una puntuación de 9 (alto). Si un atacante roba credenciales, [consecuencia concreta: qué datos o sistemas quedan expuestos]. La probabilidad asignada es [valor] porque [razón], y el impacto es [valor] porque [razón]. Los controles del Issue #13 reducen esta exposición al [cómo lo reducen].
-
-### Integridad
-El riesgo de mayor nivel en este pilar es R04, con una puntuación de 9 (alto). Una inyección SQL o NoSQL permitiría [consecuencia concreta: qué datos se leerían o alterarían]. La probabilidad asignada es [valor] porque [razón], y el impacto es [valor] porque [razón]. Los controles del Issue #37 mitigan el riesgo al [cómo lo mitigan].
-
-### Disponibilidad
-El riesgo R03 es uno de los de mayor nivel en este pilar, con una puntuación de 6 (alto). Si el servidor primario falla, [consecuencia concreta: tiempo fuera de servicio y efecto en usuarios]. La probabilidad asignada es [valor] porque [razón], y el impacto es [valor] porque [razón]. La defensa del Issue #25 reduce el efecto de una caída al [cómo lo reduce].
+Como la matriz asigna el mismo impacto a los tres riesgos, la priorización depende sobre todo de la probabilidad. Por eso R02 y R04 deberían atenderse primero. Antes de cerrar el análisis, el equipo debe confirmar que estas conclusiones coinciden con su criterio.
 
 ## 6. Riesgos aceptados
-El análisis no identificó riesgos de nivel bajo que el equipo pueda aceptar sin aplicar medidas de seguridad. De los 15 riesgos identificados, 11 son altos y 4 son medios.
 
-Los riesgos altos tienen prioridad de tratamiento por su impacto potencial sobre la confidencialidad, la integridad y la disponibilidad de Zonalia. Los riesgos medios se atenderán según el calendario de desarrollo del proyecto.
+El análisis no identificó riesgos de nivel bajo que el equipo pueda aceptar sin aplicar medidas. De los 16 riesgos identificados, 12 son altos y 4 son medios.
+
+Los riesgos altos tienen prioridad de tratamiento por su impacto potencial sobre la confidencialidad, la integridad y la disponibilidad de Zonalia. Los riesgos medios se atenderán según el calendario del proyecto.
 
 Una vez implementadas y verificadas las defensas, el equipo hará una nueva evaluación para determinar si los riesgos residuales pueden aceptarse.
