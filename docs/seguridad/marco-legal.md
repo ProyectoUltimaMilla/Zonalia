@@ -54,3 +54,19 @@ Conservación. Cuando los datos ya no hacen falta, se bloquean y después se sup
 Los derechos ARCO son acceso (artículo 22), rectificación (artículo 23), cancelación (artículo 24) y oposición (artículo 26). Ejercerlos es gratuito (artículo 34). El responsable debe responder en 20 días y hacer efectiva la respuesta en 15 más (artículo 31). Zonalia debe permitir localizar los datos de una persona por nombre, teléfono o guía, y corregir o suprimir un registro sin afectar a otros.
 
 Principio de responsabilidad. El responsable debe adoptar medidas para cumplir la ley (artículo 13) y designar a una persona o departamento que atienda las solicitudes ARCO (artículo 29). En Zonalia, las evidencias de cumplimiento son la bitácora de accesos (#16), el registro de cambios de estado y las pruebas del sistema. Faltan la persona designada, las políticas internas y la capacitación del personal; deben marcarse como pendientes hasta que existan.
+
+## 7. La ubicación del repartidor como dato personal
+
+Las coordenadas de entrega y el registro de ubicación previsto en MongoDB permiten saber dónde está una persona identificable (artículo 2, fracción V). Un rastreo continuo puede revelar hábitos o el domicilio del repartidor, lo que podría generar un riesgo grave (artículo 2, fracción VI).
+
+Por proporcionalidad (artículo 12), la ubicación debería capturarse sólo al confirmar cada entrega. El repartidor debe saber que se registra (artículo 6). La base laboral del artículo 9, fracción IV, cubre el registro de la entrega, pero no es claro que cubra un rastreo continuo; ese punto debe discutirse con la empresa.
+
+## 8. Seguridad de los datos y vulneraciones
+
+El responsable debe mantener medidas de seguridad administrativas, técnicas y físicas (artículo 18). En Zonalia, las administrativas son los roles y las políticas; las técnicas son el cifrado, el hash de contraseñas, los tokens con vencimiento y la validación de entradas; las físicas son el control de acceso a los servidores. Algunas siguen planeadas y deben marcarse así en el documento final.
+
+Si una vulneración afecta de forma significativa los derechos de los titulares, debe informarse de inmediato (artículo 19). Vulnerar la seguridad por causa imputable al responsable es una infracción (artículo 58, fracción XI). Quien, con ánimo de lucro, provoque una vulneración puede enfrentar de tres meses a tres años de prisión (artículo 62).
+
+## 9. Datos sintéticos en este proyecto
+
+La ley aplica sólo a datos de personas identificadas o identificables (artículo 2, fracción V). Los registros sintéticos sin relación con personas reales quedan fuera. Hay que evitar que un nombre o teléfono generado coincida con una persona real, y no mezclar datos reales en las pruebas. Las colonias pueden ser reales porque provienen del catálogo público de SEPOMEX. El proyecto no debe compartir datos reales con herramientas de IA.
