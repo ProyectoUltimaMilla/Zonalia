@@ -29,3 +29,17 @@ uvicorn zonalia.api.main:app --reload
 ```
 
 La API queda en http://127.0.0.1:8000/health y la documentación en http://127.0.0.1:8000/docs.
+
+Generador de datos sintéticos (#15)
+
+Crea 100 000 paquetes ficticios con semilla fija (la misma semilla da siempre los mismos datos): destinatarios inventados con Faker, un manifiesto por día en CSV y JSON, rutas, asignaciones, entregas y el historial de estados. Las colonias y zonas son las del catálogo de db/catalogos/ (#9). Ningún dato es real.
+
+python -m zonalia.generador                       # solo genera los archivos en servicios/salida/
+python -m zonalia.generador --cargar              # además los carga a la base (debe estar vacía)
+python -m zonalia.generador --cargar --reiniciar  # vacía las tablas y vuelve a cargar
+
+Para cargar, la base del compose debe estar arriba (docker compose --profile local up -d db). Se conecta con POSTGRES_ADMIN_USER y POSTGRES_ADMIN_PASSWORD del .env.
+
+CONTRASENA_DEMO del .env es la contraseña de los usuarios de demostración (admin, supervisor1 a supervisor3, rep01 en adelante). Si está vacía, nadie puede entrar con ellos.
+
+En servicios/salida/ quedan manifiestos/jt_AAAA-MM-DD.csv y .json, y conteo_por_zona.csv, que usa el ADR-001 (#12). La carpeta no se sube.
