@@ -30,3 +30,20 @@ jobs:
         run: pytest --cov=zonalia --cov-report=term-missing --cov-fail-under=60
       - name: Dependencias vulnerables (pip-audit)
         run: pip-audit --skip-editable
+    app:
+    name: app
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: app
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+      - name: Dependencias
+        run: flutter pub get
+      - name: Análisis estático
+        run: flutter analyze
+      - name: Pruebas de widgets
+        run: flutter test
