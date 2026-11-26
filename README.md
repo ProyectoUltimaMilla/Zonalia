@@ -52,9 +52,8 @@ Cada integrante es responsable principal de un componente, que defiende de forma
 | --- | --- | --- |
 | José Arturo Picazo Zaragoza | @PicazoArturo | Base de datos distribuida e infraestructura; coordinación del proyecto |
 | Juan Jesús Vázquez Martín del Campo | @jesusvazquezmc | API REST, aplicación Flutter y CI |
-
+| Hugo Vázquez Hernandez | @Huguiti080 | Auditoría y detección de intrusos |
 | Tadeo Andrade Sustaita | @Tadeo123863 | Datos sintéticos y analítica |
-_Jesús, Hugo agregan su fila en los issues #2 y #3._
 
 ## Cómo trabajamos
 
