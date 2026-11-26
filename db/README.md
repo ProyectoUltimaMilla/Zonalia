@@ -4,8 +4,8 @@ Código SQL de PostgreSQL y catálogos (lineamientos IV-a). Responsable principa
 
 | Carpeta | Contenido | Issue | Responsable |
 | --- | --- | --- | --- |
-| `esquema/` | Tablas, llaves e índices (`01_tablas.sql`, …), luego procedimientos, funciones y triggers | #5, #11 | Arturo |
-| `catalogos/` | Catálogo de colonias de Aguascalientes, zonas y sus scripts de preparación y asignación | #9 | Tadeo |
+| | `esquema/` | Tablas, llaves e índices (`001_tablas.sql`, `002_indices.sql`), luego historial, funciones, procedimiento y triggers (`003` a `006`) | #5, #11 | Arturo |
+| `pruebas/` | Scripts que comprueban las reglas de la base (`011_asignacion.sql`) | #11 | Arturo |
 | Replicación, roles y respaldos | Se agregan en sus issues | #19, #33, #39 | Arturo |
 
 - La explicación de cada parte va en `docs/bd/`.
