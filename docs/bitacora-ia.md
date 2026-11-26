@@ -26,6 +26,7 @@ Ejemplo:
 | --- | --- | --- | --- | --- | --- | --- |
 | 2026-11-25 | Nombre | Asistente usado | #13: función para validar el token JWT (con verificación) | Se aceptó la estructura; se cambió el tiempo de expiración a 8 h | `pytest tests/test_auth.py` en verde y revisión de Hugo | a1b2c3d |
 
+| 2026-11-25 | Tadeo | Claude | Scripts para limpiar el catálogo SEPOMEX y aplicar y revisar las zonas (nivel libre). El criterio de zonas lo decidió el equipo sin IA | Se aceptaron; revisé cada paso y lo corrí con el catálogo real | Revisé a mano 10 colonias contra el TXT y revisar_zonas.py dio 0 colonias sin zona | a1de9d0 |
 ## Registro
 
 El commit es el hash del commit en la rama (se conserva porque integramos con merge commit).
