@@ -1,109 +1,109 @@
 codigo_postal,colonias,ejemplos,zona_id
-20000,1,Aguascalientes Centro,
-20010,6,Colinas del Río; Dominium; Las Brisas,
-20016,4,Colinas de San Ignacio; Fundición II; La Fundición,
-20018,1,Línea de Fuego,
-20020,4,Buenos Aires; Circunvalación Norte; Las Arboledas,
-20029,1,Villas de La Universidad,
-20030,3,El Sol; Gremial; Industrial,
-20040,6,Altavista; Curtidores; La Concordia,
-20049,1,Colinas del Poniente,
-20050,5,Bugambilias; Del Carmen; La Fe,
-20059,2,Guadalupe; Heliodoro García,
-20060,2,Gómez; Moderno,
-20064,1,Valle del Rio San Pedro,
-20070,3,Guadalupe Posada; San Marcos; San Marcos,
-20078,1,San Marcos,
-20080,2,Modelo; Residencial del Valle I,
-20089,1,Residencial del Valle II,
-20100,6,Ciudad Universitaria; Club Campestre; Jardines del Campestre,
-20110,9,Arroyo de la Hacienda; Granjas del Campestre; La Enramada,
-20115,9,Antigua Hacienda de Cardona; Barrio de Santiago; La Paloma,
-20116,4,La Troje; San Telmo Norte; Santa Fe,
-20118,24,Albatros; Andora Residencial; Cadaqués Residencial,
-20119,2,Lomas del Campestre 2a Sección; Villas del Campestre,
-20120,3,Jardines de la Concepción; Los Bosques; Rinconada los Bosques,
-20123,2,Arroyo El Molino; La Perla Norte,
-20124,2,Galerías; Residencial Altaria,
-20126,39,Bonafortuna; Capittala; Cartagena 1947,
-20127,1,Bosques del Prado Norte,
-20128,1,Sartenejo,
-20129,1,Lomas del Campestre 1a Sección,
-20130,16,Bosques del Prado Sur; El Roble; Fátima,
-20135,2,Agropecuario; Centro Distribuidor de Básicos,
-20136,1,La Rinconada,
-20137,1,El Plateado,
-20138,4,Cerrada San Miguel; Residencial Pulgas Pandas Norte; Residencial Pulgas Pandas Sur,
-20140,3,Andrea; Las Hadas; Morelos,
-20146,1,Los Arcos,
-20149,1,Industrial,
-20150,9,Buenavista; C.T.M.; La Esmeralda,
-20157,2,La Higuerilla; Parras,
-20158,4,El Cobano; Hacienda el Cobano; Trojes del Cobano,
-20159,2,Alianza Ferrocarrilera; Bosques del Prado Oriente,
-20160,2,Francisco Guel Jiménez; Las Viñas,
-20164,1,Santa Anita 4a Sección,
-20169,1,Santa Anita,
-20170,7,El Maguey; Lic Benito Juárez; Nazario Ortiz Garza,
-20172,6,Anexo Benito Palomino Dena (Cumbres II); Benito Palomino Dena; Claustros Loma Dorada,
-20174,13,Colinas de Oriente; Lomas de Bellavista; Lomas de las Fuentes,
-20175,5,Ejido las Cumbres; J Refugio Esparza Reyes; La Hojarasca,
-20177,1,C.N.O.P. Oriente,
-20179,8,Cerro Alto; Las Cumbres; Luis Ortega Douglas,
-20180,7,Alameda; Bosques de La Alameda; Del Trabajo,
-20190,3,Héroes; La Hacienda; La Mancha,
-20196,26,Ambrosía; Balcones de Oriente; Balcones del Valle,
-20198,3,Ejido Ojocaliente; Ex Hacienda Ojocaliente; Misión Alameda,
-20199,4,El Riego; Fidel Velázquez; Municipio Libre,
-20200,23,Balandra; Cantelli Residencial; Canterra,
-20205,2,Educación Álamos; Nueva España,
-20206,2,Barandales de San José; José López Portillo,
-20207,3,Canteras de San Javier; Capital City; Rinconada San José,
-20208,1,Canteras de San José,
-20210,4,Circunvalación Poniente; España; La Barranca de Guadalupe,
-20217,1,Residencial los Pirules,
-20218,17,Alberia; Boreal; Canteras de San Agustin,
-20219,3,El Edén; Misión Juan Pablo II; Parque Industrial el Vergel,
-20220,2,Las Flores; Vivienda Popular,
-20229,1,Las Torres,
-20230,3,Las Américas; Obraje; Santa Elena,
-20234,1,Agricultura,
-20235,4,El Dorado 1a Sección; El Dorado 2a Sección; Valle Dorado,
-20236,1,Jardines de Santa Elena,
-20237,2,Hermanos Carreón; Montebello,
-20238,1,Santa Elena 2a Sección,
-20239,1,La Fuente,
-20240,11,El Encino; El Laurel; El Llanito,
-20247,1,San Fernando INFONAVIT,
-20248,1,Jardines de Triana,
-20249,1,Gámez,
-20250,7,Héroes de Aguascalientes; Jardines de La Cruz; Jesús Gómez Portugal,
-20255,2,Bona Gens; INFONAVIT Los Volcanes,
-20256,5,Ojocaliente FOVISSSTE I; Ojocaliente FOVISSSTE II; Ojocaliente las Torres,
-20257,1,Lázaro Cárdenas,
-20259,2,La Estación; La Purísima,
-20260,4,IV Centenario; Jesús Terán Peredo; Ojo de Agua,
-20263,23,Agua Clara; Bajío de las Palmas; Balcones de Ojocaliente,
-20264,4,Morelos INFONAVIT; Vista del Sol 1a Sección; Vista del Sol 2a Sección,
-20265,1,Ojo de Agua INFONAVIT,
-20266,3,Jardines del Sol; La Cruz; Misión de Santa Fe,
-20267,5,Jardines de La Convención; Ojo de Agua FOVISSSTE 1a Sección; Primo Verdad INEGI,
-20268,1,Fuentes de La Asunción,
-20269,1,Jardines de La Luz,
-20270,8,Bulevar; El Caminero; Jardines de Aguascalientes,
-20276,3,Jardines de Alejandría; Jardines de las Bugambilias; Jardines del Parque,
-20277,3,Pirámides; Residencial del Parque; Rinconada del Parque,
-20278,1,Jardines de las Fuentes,
-20280,14,Australis; Bosques Providencia; Casa Solida,
-20283,3,Kerarta; Lucerna; Parque Industrial Siglo XXI,
-20284,8,INFONAVIT Potreros del Oeste; La Casita; La Estancia,
-20285,2,Versalles 1a Sección; Versalles 2a Sección,
-20286,16,Abadía; Amura; Barlovento,
-20287,1,Insurgentes,
-20288,2,Bulevares 1a. Sección; Bulevares 2a. Sección,
-20289,1,Pilar Blanco INFONAVIT,
-20290,3,Ciudad Industrial; Parque Industrial ALTEC; Vista Alegre,
-20296,6,Reserva San Matías; Rústicos Calpulli; San Francisco de los Arteaga,
-20297,3,Casa Blanca; Jardines de Casablanca; Jardines de Casanueva,
-20298,23,Condominio La terraza; Emiliano Zapata; Hacienda San Marcos,
-20299,9,Fundadores; Lomas de San Jorge; Lomas del Ajedrez,
+20000,1,Aguascalientes Centro,1
+20010,6,Colinas del Río; Dominium; Las Brisas,5
+20016,4,Colinas de San Ignacio; Fundición II; La Fundición,2
+20018,1,Línea de Fuego,2
+20020,4,Buenos Aires; Circunvalación Norte; Las Arboledas,1
+20029,1,Villas de La Universidad,2
+20030,3,El Sol; Gremial; Industrial,1
+20040,6,Altavista; Curtidores; La Concordia,1
+20049,1,Colinas del Poniente,5
+20050,5,Bugambilias; Del Carmen; La Fe,1
+20059,2,Guadalupe; Heliodoro García,1
+20060,2,Gómez; Moderno,1
+20064,1,Valle del Rio San Pedro,5
+20070,3,Guadalupe Posada; San Marcos; San Marcos,1
+20078,1,San Marcos,1
+20080,2,Modelo; Residencial del Valle I,1
+20089,1,Residencial del Valle II,4
+20100,6,Ciudad Universitaria; Club Campestre; Jardines del Campestre,5
+20110,9,Arroyo de la Hacienda; Granjas del Campestre; La Enramada,5
+20115,9,Antigua Hacienda de Cardona; Barrio de Santiago; La Paloma,5
+20116,4,La Troje; San Telmo Norte; Santa Fe,2
+20118,24,Albatros; Andora Residencial; Cadaqués Residencial,2
+20119,2,Lomas del Campestre 2a Sección; Villas del Campestre,5
+20120,3,Jardines de la Concepción; Los Bosques; Rinconada los Bosques,2
+20123,2,Arroyo El Molino; La Perla Norte,2
+20124,2,Galerías; Residencial Altaria,2
+20126,39,Bonafortuna; Capittala; Cartagena 1947,2
+20127,1,Bosques del Prado Norte,2
+20128,1,Sartenejo,2
+20129,1,Lomas del Campestre 1a Sección,5
+20130,16,Bosques del Prado Sur; El Roble; Fátima,2
+20135,2,Agropecuario; Centro Distribuidor de Básicos,2
+20136,1,La Rinconada,2
+20137,1,El Plateado,2
+20138,4,Cerrada San Miguel; Residencial Pulgas Pandas Norte; Residencial Pulgas Pandas Sur,2
+20140,3,Andrea; Las Hadas; Morelos,2
+20146,1,Los Arcos,2
+20149,1,Industrial,2
+20150,9,Buenavista; C.T.M.; La Esmeralda,2
+20157,2,La Higuerilla; Parras,2
+20158,4,El Cobano; Hacienda el Cobano; Trojes del Cobano,2
+20159,2,Alianza Ferrocarrilera; Bosques del Prado Oriente,2
+20160,2,Francisco Guel Jiménez; Las Viñas,3
+20164,1,Santa Anita 4a Sección,3
+20169,1,Santa Anita,3
+20170,7,El Maguey; Lic Benito Juárez; Nazario Ortiz Garza,3
+20172,6,Anexo Benito Palomino Dena (Cumbres II); Benito Palomino Dena; Claustros Loma Dorada,3
+20174,13,Colinas de Oriente; Lomas de Bellavista; Lomas de las Fuentes,3
+20175,5,Ejido las Cumbres; J Refugio Esparza Reyes; La Hojarasca,3
+20177,1,C.N.O.P. Oriente,3
+20179,8,Cerro Alto; Las Cumbres; Luis Ortega Douglas,3
+20180,7,Alameda; Bosques de La Alameda; Del Trabajo,3
+20190,3,Héroes; La Hacienda; La Mancha,3
+20196,26,Ambrosía; Balcones de Oriente; Balcones del Valle,3
+20198,3,Ejido Ojocaliente; Ex Hacienda Ojocaliente; Misión Alameda,3
+20199,4,El Riego; Fidel Velázquez; Municipio Libre,3
+20200,23,Balandra; Cantelli Residencial; Canterra,5
+20205,2,Educación Álamos; Nueva España,5
+20206,2,Barandales de San José; José López Portillo,5
+20207,3,Canteras de San Javier; Capital City; Rinconada San José,5
+20208,1,Canteras de San José,5
+20210,4,Circunvalación Poniente; España; La Barranca de Guadalupe,5
+20217,1,Residencial los Pirules,5
+20218,17,Alberia; Boreal; Canteras de San Agustin,5
+20219,3,El Edén; Misión Juan Pablo II; Parque Industrial el Vergel,5
+20220,2,Las Flores; Vivienda Popular,4
+20229,1,Las Torres,4
+20230,3,Las Américas; Obraje; Santa Elena,1
+20234,1,Agricultura,1
+20235,4,El Dorado 1a Sección; El Dorado 2a Sección; Valle Dorado,4
+20236,1,Jardines de Santa Elena,4
+20237,2,Hermanos Carreón; Montebello,4
+20238,1,Santa Elena 2a Sección,4
+20239,1,La Fuente,4
+20240,11,El Encino; El Laurel; El Llanito,1
+20247,1,San Fernando INFONAVIT,4
+20248,1,Jardines de Triana,1
+20249,1,Gámez,1
+20250,7,Héroes de Aguascalientes; Jardines de La Cruz; Jesús Gómez Portugal,4
+20255,2,Bona Gens; INFONAVIT Los Volcanes,3
+20256,5,Ojocaliente FOVISSSTE I; Ojocaliente FOVISSSTE II; Ojocaliente las Torres,3
+20257,1,Lázaro Cárdenas,3
+20259,2,La Estación; La Purísima,1
+20260,4,IV Centenario; Jesús Terán Peredo; Ojo de Agua,3
+20263,23,Agua Clara; Bajío de las Palmas; Balcones de Ojocaliente,3
+20264,4,Morelos INFONAVIT; Vista del Sol 1a Sección; Vista del Sol 2a Sección,3
+20265,1,Ojo de Agua INFONAVIT,3
+20266,3,Jardines del Sol; La Cruz; Misión de Santa Fe,3
+20267,5,Jardines de La Convención; Ojo de Agua FOVISSSTE 1a Sección; Primo Verdad INEGI,3
+20268,1,Fuentes de La Asunción,3
+20269,1,Jardines de La Luz,3
+20270,8,Bulevar; El Caminero; Jardines de Aguascalientes,4
+20276,3,Jardines de Alejandría; Jardines de las Bugambilias; Jardines del Parque,4
+20277,3,Pirámides; Residencial del Parque; Rinconada del Parque,4
+20278,1,Jardines de las Fuentes,4
+20280,14,Australis; Bosques Providencia; Casa Solida,4
+20283,3,Kerarta; Lucerna; Parque Industrial Siglo XXI,4
+20284,8,INFONAVIT Potreros del Oeste; La Casita; La Estancia,5
+20285,2,Versalles 1a Sección; Versalles 2a Sección,5
+20286,16,Abadía; Amura; Barlovento,4
+20287,1,Insurgentes,4
+20288,2,Bulevares 1a. Sección; Bulevares 2a. Sección,4
+20289,1,Pilar Blanco INFONAVIT,4
+20290,3,Ciudad Industrial; Parque Industrial ALTEC; Vista Alegre,4
+20296,6,Reserva San Matías; Rústicos Calpulli; San Francisco de los Arteaga,4
+20297,3,Casa Blanca; Jardines de Casablanca; Jardines de Casanueva,4
+20298,23,Condominio La terraza; Emiliano Zapata; Hacienda San Marcos,4
+20299,9,Fundadores; Lomas de San Jorge; Lomas del Ajedrez,4
