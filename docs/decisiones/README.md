@@ -9,7 +9,7 @@ Las decisiones importantes de diseño se documentan aquí, una por archivo, con 
 | ADR-003 | Distribución de nodos | #18 | Arturo | Pendiente |
 | ADR-004 | Replicación y elección del nuevo primario | #25 | Arturo | Pendiente |
 | ADR-005 | Principales controles de seguridad | #34 | Arturo | Pendiente |
-| ADR-006 | Estado y persistencia local en Flutter | #14 | Jesús | Pendiente |
+| [ADR-006](ADR-006-estado-persistencia-flutter.md) | Estado y persistencia local en Flutter | #14 | Jesús | Propuesta |
 
 ## Cómo se hace un ADR
 
