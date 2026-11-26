@@ -14,7 +14,7 @@ Lo que hay que proteger y por qué importa.
 | A02 | Contraseñas y tokens de sesión | N2, app |Permiten autenticar a los usuarios del sistema. Si alguien obtiene acceso indebido a ellos, podria acceder a cuentas ajenas, realizar operaciones no autorizadas.  |
 | A03 | Base de datos primaria | N2 | Almacena la información necesaria para la operación del reparto. Su perdida o alteración ocasionaria la interrupcion del servicio, errores en las entregas y perdida de información critica |
 | A04 | Réplica de la base de datos | N3 |  Tendremos una copia de la información del nodo primario. Su falla afectaria la disponibilidad del sistema y la capacidad de recuperacion ante desastres|
-| A05 | API REST | N1 | Permite la comunicación entre la aplicación y los servicios del sistema si deja de funcionar, los usuarios no podrian realizar pedidos, consultar el estado de sus entregas ni comunicarse con los repartidaroes |
+| A05 | API REST | N1 | Permite la comunicación entre la aplicación y los servicios del sistema. Si deja de funcionar, el supervisor no puede asignar paquetes y el repartidor no puede consultar su ruta ni confirmar entregas. |
 | A06 | Base analítica | N4 |Almacena informacion para generar reportes y monitorear el sistema. La alteracion de sus datos podria ocasionar, decisiones erroneas, reportes inexactos y perdida de confianza en la operación.|
 | A07 | Evidencias de entrega (foto y ubicación) | N2, app | Permiten comporbar que los paquetes fueron entregados. Su perdida o modificacion podria generar disputas con los clientes, fraudes en las entregas y dificultades para resolver reclamos |
 | A08 | Manifiestos de paquetes (CSV o JSON) | N1 |Contienen informacion de los paquetes que deben procesarse. Los errores en estos archivos podrian provocar entregas a destinos incorrectos  |
@@ -60,18 +60,27 @@ Probabilidad e impacto de 1 a 3. **Nivel = probabilidad × impacto.**
 | R13 | A05 | I | Vulnerabilidades de autorización no identificadas | Modificación de paquetes por usuarios sin los permisos correspondientes | 2 | 2 | 4 medio | Pruebas de hackeo ético y corrección de vulnerabilidades identificadas | #47 |
 | R14 | A12 | I | Incorporación de dependencias sugeridas por IA sin verificar su procedencia | Introducción de paquetes maliciosos al proyecto | 1 | 3 | 3 medio | Verificación de dependencias en PyPI y auditoría mediante pip-audit | #48 |
 | R15 | A12 | C | Inclusión de secretos o datos sensibles en consultas a herramientas de IA | Divulgación de credenciales o información confidencial | 2 | 3 | 6 alto | Uso exclusivo de datos sintéticos y prohibición de compartir secretos con IA según CONTRIBUTING.md | #6 |
-| R16 |   A12   | Integridad | Incorporación de código generado por IA sin revisión humana. | Introducción de código con vulnerabilidades de seguridad. | Por determinar. | Por determinar | --- | 	Revisión obligatoria mediante PR y análisis estático con Bandit. | 8 |
+| R16 | A12 | I | Incorporación de código generado por IA sin revisión humana | Introducción de código con vulnerabilidades de seguridad | 2 | 3 | 6 alto | Revisión obligatoria mediante PR y análisis estático con Bandit | #8 |
 
 ## 4. La IA como factor de riesgo
 El uso de herramientas de inteligencia artificial durante el desarrollo de Zonalia puede representar riesgos para la seguridad, la calidad y la confidencialidad del sistema y de su código fuente.
 
-Los principales escenarios identificados son la generación de código inseguro o con licencias incompatibles, y la exposición de información sensible o propietaria en las consultas realizadas a herramientas de IA, correspondientes a los riesgos R14 y R15 de la tabla de riesgos.
+Los principales escenarios identificados son la generación de código inseguro o con licencias incompatibles, y la exposición de información sensible o propietaria en las consultas realizadas a herramientas de IA, correspondientes a los riesgos  R16, R14 y R15 de la tabla de riesgos.
 
 Para reducir estos riesgos, el equipo contempla el uso de herramientas de IA aprobadas, la revisión obligatoria del código generado, la anonimización de datos antes de enviarlos a servicios externos y la documentación del origen de las sugerencias utilizadas.
 
 El código y las sugerencias proporcionadas por IA deberán ser revisados, validados y probados por un miembro del equipo antes de integrarse al repositorio, respetando las reglas establecidas en CONTRIBUTING.md.
 
 ## 5. Resumen por pilar
+Los riesgos de confidencialidad (R02) e integridad (R04) son los de mayor nivel, con 9 cada uno. Ambos tienen probabilidad 3 e impacto 3. El de disponibilidad (R03) queda en 6, con probabilidad 2 e impacto 3.
+
+En confidencialidad, la consecuencia principal es el robo de cuentas y de datos personales. La defensa planteada combina Argon2 para el almacenamiento de contraseñas, JWT y un esquema de roles. Esto se vincula con el issue #13.
+
+En integridad, el riesgo es la alteración de paquetes, rutas y entregas. Se propone validar las entradas y usar consultas parametrizadas, lo que se rastrea en el issue #37.
+
+En disponibilidad, el riesgo es la interrupción de asignaciones y consultas. La medida es promover la réplica, documentada en el issue #25. Todavía no hay mediciones de tiempo de recuperación, así que no conviene citar ninguna cifra hasta que se midan.
+
+Como la matriz asigna el mismo impacto a los tres riesgos, la priorización depende sobre todo de la probabilidad. Por eso los dos riesgos de nivel 9 son los que deberían atenderse primero. Antes de cerrar el análisis, el equipo debería confirmar que estas conclusiones coinciden con su criterio.
 
 ### Confidencialidad
 El riesgo de mayor nivel en este pilar es R02, con una puntuación de 9 (alto). Si un atacante roba credenciales, [consecuencia concreta: qué datos o sistemas quedan expuestos]. La probabilidad asignada es [valor] porque [razón], y el impacto es [valor] porque [razón]. Los controles del Issue #13 reducen esta exposición al [cómo lo reducen].
