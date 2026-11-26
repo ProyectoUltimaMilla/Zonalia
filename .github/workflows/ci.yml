@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  servicios:
+    name: servicios
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: servicios
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Instalar dependencias
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+      - name: Estilo (ruff)
+        run: |
+          ruff check .
+          ruff format --check .
+      - name: Seguridad del código (bandit)
+        run: bandit -r src -q
+      - name: Pruebas y cobertura mínima 60 %
+        run: pytest --cov=zonalia --cov-report=term-missing --cov-fail-under=60
+      - name: Dependencias vulnerables (pip-audit)
+        run: pip-audit --skip-editable
