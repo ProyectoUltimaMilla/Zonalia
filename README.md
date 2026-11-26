@@ -51,6 +51,7 @@ Cada integrante es responsable principal de un componente, que defiende de forma
 | Integrante | Usuario de GitHub | Componente principal |
 | --- | --- | --- |
 | José Arturo Picazo Zaragoza | @PicazoArturo | Base de datos distribuida e infraestructura; coordinación del proyecto |
+| Juan Jesús Vázquez Martín del Campo | @jesusvazquezmc | API REST, aplicación Flutter y CI |
 
 _Jesús, Hugo y Tadeo agregan su fila en los issues #2, #3 y #4._
 
