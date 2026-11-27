@@ -4,9 +4,9 @@ Las decisiones importantes de diseño se documentan aquí, una por archivo, con 
 
 | ADR | Decisión | Issue | Responsable | Estado |
 | --- | --- | --- | --- | --- |
-| [ADR-001](ADR-001-shard-key.md) | Fragmentación y shard key | #12 | Arturo | Propuesta (validar con datos) |
-| ADR-002 | Postura CAP y tipo de consistencia | #12 | Arturo | Pendiente |
-| ADR-003 | Distribución de nodos | #18 | Arturo | Pendiente |
+| [ADR-001](ADR-001-shard-key.md) | Fragmentación y shard key | #12 | Arturo | Propuesta (Arturo, 26 nov) |
+| [ADR-002](ADR-002-cap.md) | Postura CAP y tipo de consistencia | #12 | Arturo | Propuesta (Arturo, 26 nov) |
+| [ADR-003](ADR-003-nodos.md) | Distribución de nodos | #18 | Arturo | Pendiente (se decide el 30 nov) |
 | ADR-004 | Replicación y elección del nuevo primario | #25 | Arturo | Pendiente |
 | ADR-005 | Principales controles de seguridad | #34 | Arturo | Pendiente |
 | [ADR-006](ADR-006-estado-persistencia-flutter.md) | Estado y persistencia local en Flutter | #14 | Jesús | Propuesta |

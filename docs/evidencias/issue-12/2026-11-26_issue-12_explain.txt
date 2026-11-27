@@ -1,0 +1,7 @@
+                                                                  QUERY PLAN                                                                   
+-----------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=8.31..8.32 rows=1 width=8)
+   ->  Index Only Scan using paquete_z3_oriente_zona_id_estado_recibido_en_idx on paquete_z3_oriente paquete  (cost=0.29..8.31 rows=1 width=0)
+         Index Cond: ((zona_id = 3) AND (estado = 'recibido'::text))
+(3 rows)
+
