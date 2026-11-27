@@ -1,0 +1,14 @@
+ soy_replica 
+-------------
+ f
+(1 row)
+
+ application_name | client_addr  |   state   | sync_state | falta_por_aplicar | write_lag | flush_lag | replay_lag 
+------------------+--------------+-----------+------------+-------------------+-----------+-----------+------------
+ walreceiver      | 192.168.65.1 | streaming | async      | 0 bytes           |           |           | 
+(1 row)
+
+ status | sender_host | last_msg_receipt_time 
+--------+-------------+-----------------------
+(0 rows)
+

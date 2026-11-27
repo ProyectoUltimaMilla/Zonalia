@@ -1,0 +1,30 @@
+$ IP_PUBLICACION_DB=127.0.0.1 docker compose -p zonalia-n3 --profile n3 exec -T db-replica psql -U zonalia_admin -d zonalia -c "SELECT count(*) FROM paquete"
+ count  
+--------
+ 100000
+(1 row)
+
+(código de salida: 0)
+
+$ docker compose exec -T db psql -U zonalia_admin -d zonalia -c "INSERT INTO zona (zona_id, nombre) VALUES (9, 'Prueba réplica')"
+INSERT 0 1
+(código de salida: 0)
+
+$ sleep 1
+
+$ IP_PUBLICACION_DB=127.0.0.1 docker compose -p zonalia-n3 --profile n3 exec -T db-replica psql -U zonalia_admin -d zonalia -c "SELECT * FROM zona WHERE zona_id = 9"
+ zona_id |     nombre     | activa 
+---------+----------------+--------
+       9 | Prueba réplica | t
+(1 row)
+
+(código de salida: 0)
+
+$ IP_PUBLICACION_DB=127.0.0.1 docker compose -p zonalia-n3 --profile n3 exec -T db-replica psql -U zonalia_admin -d zonalia -c "DELETE FROM zona WHERE zona_id = 9"
+ERROR:  cannot execute DELETE in a read-only transaction
+(código de salida: 1)
+
+$ docker compose exec -T db psql -U zonalia_admin -d zonalia -c "DELETE FROM zona WHERE zona_id = 9"
+DELETE 1
+(código de salida: 0)
+

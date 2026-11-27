@@ -1,0 +1,10 @@
+INSERT 0 5
+ zona_id |      particion      | nodo_primario | nodo_replica 
+---------+---------------------+---------------+--------------
+       1 | paquete_z1_centro   | n2            | n3
+       2 | paquete_z2_norte    | n2            | n3
+       3 | paquete_z3_oriente  | n2            | n3
+       4 | paquete_z4_sur      | n2            | n3
+       5 | paquete_z5_poniente | n2            | n3
+(5 rows)
+

@@ -1,0 +1,9 @@
+      particion      | count 
+---------------------+-------
+ paquete_z1_centro   |  9199
+ paquete_z2_norte    | 24063
+ paquete_z3_oriente  | 25689
+ paquete_z4_sur      | 21881
+ paquete_z5_poniente | 19168
+(5 rows)
+
