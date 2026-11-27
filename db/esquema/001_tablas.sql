@@ -1,6 +1,6 @@
 -- 001_tablas.sql
 -- Crea las tablas de Zonalia con sus llaves primarias, foráneas y restricciones (issue #5).
--- No depende de otro archivo. Las particiones por zona se crean en db/fragmentos/ (issue #12).
+-- No depende de otro archivo. Las particiones por zona se crean en 007_fragmentos.sql (issue #12).
 
 -- Catálogos
 
