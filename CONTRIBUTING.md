@@ -40,17 +40,34 @@ IA: asistido
 - Usa la plantilla y escribe `Closes #<número>` para ligar el issue.
 - Pide revisión a la persona indicada en el issue y cambia la etiqueta a `en-revision`.
 - Si usaste IA, agrega tu entrada en `docs/bitacora-ia.md` en el mismo PR.
-- Ningún PR debe esperar más de 12 horas su revisión.
+- Tu PR lo revisa la persona del turno siguiente, al empezar su turno (ver **Turnos**).
 
 ## 5. Revisión
 
 - La aprobación es de una persona distinta al autor, nunca de una IA.
 - El revisor prueba el cambio. Si el autor no puede explicar su PR en dos minutos, no se integra.
+- Si al integrar aparece un conflicto en la bitácora o en el README, el revisor lo resuelve en GitHub (**Resolve conflicts**), deja las filas de los dos, borra las marcas `<<<<<<<`, `=======` y `>>>>>>>`, y vuelve a aprobar.
+- Usa **Request changes** solo si tú vas a volver a revisar ese PR. Si lo integra otra persona, deja tus observaciones con **Comment**.
 
 ## 6. Integración
 
-- Con CI en verde y una aprobación, el autor integra con **Create a merge commit** (no squash ni rebase, para conservar los hashes que anota la bitácora).
+- Con CI en verde y una aprobación, integra el revisor del turno que entra, con **Create a merge commit** (no squash ni rebase, para conservar los hashes que anota la bitácora). Después crea sus propias ramas desde `main` actualizado.
 - El issue se cierra solo al integrar y pasa a **Hecho**.
+
+## 7. Turnos
+
+Trabajamos en relevo. Nadie empieza su turno hasta que el anterior avisa en el chat que terminó. No hay hora límite, lo que importa es el orden.
+
+| Turno | Quién | Empieza revisando e integrando |
+| --- | --- | --- |
+| T1 | Arturo | Los PR de Tadeo del día anterior |
+| T2 | Jesús | Los PR de Arturo |
+| T3 | Hugo | Los PR de Jesús |
+| T4 | Tadeo | Los PR de Hugo |
+
+- Primero se integra y después se crean las ramas nuevas desde `main` actualizado. Así casi no hay conflictos.
+- Si tu segundo issue del día necesita el primero, su rama sale de la rama del primero y en el PR se indica cuál se integra antes.
+- Al terminar, avisa en el chat qué PR dejaste y para quién.
 
 ## Niveles de uso de IA (apartado V de los lineamientos)
 
