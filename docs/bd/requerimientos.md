@@ -34,7 +34,7 @@ La ruta del día de un repartidor se resuelve con las llaves únicas que ya exis
 | Paquetes al día | ~700 |
 | Paquetes al mes | ~21 000 (30 días) |
 | Registros sintéticos para pruebas | 100 000 paquetes (issue #15) |
-| Colonias de la ciudad (SEPOMEX) | se cuenta en el issue #9 |
+| Colonias de la ciudad (SEPOMEX) | 531 (issue #9) |
 
 Con este volumen, una consulta sin índice recorre toda la tabla. Los índices de la tabla de arriba evitan eso en las consultas que más se repiten.
 

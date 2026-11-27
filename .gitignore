@@ -38,3 +38,6 @@ respaldos/
 .idea/
 .vscode/
 .DS_Store
+
+# Catálogo original de SEPOMEX: su aviso legal no permite redistribuirlo
+db/catalogos/CPdescarga*.txt

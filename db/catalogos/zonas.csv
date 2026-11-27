@@ -1,0 +1,6 @@
+zona_id,nombre,descripcion
+1,Centro,Colonias dentro del primer anillo (Av. Convención de 1914)
+2,Norte,Colonias del sector norte de la ciudad
+3,Oriente,Colonias del sector oriente de la ciudad
+4,Sur,Colonias del sector sur de la ciudad
+5,Poniente,Colonias del sector poniente de la ciudad incluida la zona del Campestre
