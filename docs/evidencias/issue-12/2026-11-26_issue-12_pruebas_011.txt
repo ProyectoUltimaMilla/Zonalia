@@ -1,0 +1,9 @@
+psql:<stdin>:146: NOTICE:  OK 1: zona_de_colonia da la zona y rechaza colonias que no existen
+psql:<stdin>:146: NOTICE:  OK 2: el paquete queda asignado y carga_repartidor cuenta 1
+psql:<stdin>:146: NOTICE:  OK 3: un paquete no se asigna dos veces
+psql:<stdin>:146: NOTICE:  OK 4: no se pasa la capacidad y el intento fallido no deja cambios
+psql:<stdin>:146: NOTICE:  OK 5: no se asigna un paquete a un repartidor de otra zona
+psql:<stdin>:146: NOTICE:  OK 6: la ruta queda ordenada por colonia
+psql:<stdin>:146: NOTICE:  OK 7: una transición inválida se rechaza
+psql:<stdin>:146: NOTICE:  OK 8: historial (recibido, asignado, en_ruta) con fecha y usuario
+Todas las pruebas del #11 pasaron.
