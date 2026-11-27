@@ -7,7 +7,7 @@ name = "zonalia"
 version = "0.1.0"
 description = "Servicios en Python de Zonalia: API, dominio, datos, análisis y generador"
 requires-python = ">=3.12"
-dependencies = ["fastapi", "uvicorn[standard]"]
+dependencies = ["fastapi", "uvicorn[standard]", "argon2-cffi", "pyjwt", "psycopg[binary]"]
 
 [project.optional-dependencies]
 dev = ["pytest", "pytest-cov", "httpx", "ruff", "bandit", "pip-audit", "faker", "python-dotenv"]
