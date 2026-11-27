@@ -4,6 +4,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from zonalia.api import auth
+from zonalia.api.bitacora_accesos import BitacoraAccesos, configurar_bitacora
 from zonalia.api.config import obtener_config
 
 app = FastAPI(title="Zonalia API", version="0.1.0")
@@ -15,6 +16,10 @@ app.add_middleware(
     allow_methods=["GET", "POST", "PUT", "PATCH", "DELETE"],
     allow_headers=["Authorization", "Content-Type"],
 )
+
+# Bitácora de accesos de la API (#16).
+configurar_bitacora()
+app.add_middleware(BitacoraAccesos)
 
 app.include_router(auth.router)
 
