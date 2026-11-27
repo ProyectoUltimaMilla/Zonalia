@@ -1,0 +1,37 @@
+# Plantilla del túnel WireGuard de un nodo de Zonalia (#18).
+# Copia este texto en la app de WireGuard (Add empty tunnel). Nunca guardes aquí una
+# llave privada real: .gitignore bloquea infra/vpn/*.conf, pero este archivo sí se sube.
+# Cambia X por el número del nodo y agrega un [Peer] por cada uno de los otros 3 nodos.
+
+[Interface]
+PrivateKey = LA_GENERA_LA_APP_EN_TU_LAPTOP
+Address = 10.10.0.X/24
+ListenPort = 51820
+
+[Peer]
+# N1 Servicios (API, Nginx y Suricata)
+PublicKey = LLAVE_PUBLICA_DE_N1
+AllowedIPs = 10.10.0.1/32
+Endpoint = IP_DE_N1_EN_LA_RED_LOCAL:51820
+PersistentKeepalive = 25
+
+[Peer]
+# N2 Base primaria
+PublicKey = LLAVE_PUBLICA_DE_N2
+AllowedIPs = 10.10.0.2/32
+Endpoint = IP_DE_N2_EN_LA_RED_LOCAL:51820
+PersistentKeepalive = 25
+
+[Peer]
+# N3 Base secundaria
+PublicKey = LLAVE_PUBLICA_DE_N3
+AllowedIPs = 10.10.0.3/32
+Endpoint = IP_DE_N3_EN_LA_RED_LOCAL:51820
+PersistentKeepalive = 25
+
+[Peer]
+# N4 Analítica y monitoreo
+PublicKey = LLAVE_PUBLICA_DE_N4
+AllowedIPs = 10.10.0.4/32
+Endpoint = IP_DE_N4_EN_LA_RED_LOCAL:51820
+PersistentKeepalive = 25
