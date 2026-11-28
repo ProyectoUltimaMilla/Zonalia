@@ -113,7 +113,33 @@ services:
         condition: service_healthy
     restart: unless-stopped
 
+  # IDS pasivo en N1 (#24): mira el tráfico que llega a Nginx y anota alertas, no bloquea.
+  suricata:
+    image: jasonish/suricata:7.0
+    profiles: ["n1"]
+    network_mode: "service:nginx"
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+      - SYS_NICE
+    command:
+      - "-i"
+      - "eth0"
+      - "--set"
+      - "vars.address-groups.EXTERNAL_NET=any"
+      - "-s"
+      - "/opt/suricata/zonalia.rules"
+    volumes:
+      - ./infra/ids/zonalia.rules:/opt/suricata/zonalia.rules:ro
+      - suricata-reglas:/var/lib/suricata
+      - suricata-logs:/var/log/suricata
+    depends_on:
+      - nginx
+    restart: unless-stopped
+
 volumes:
   db-datos:
   db-replica-datos:
   mongo-datos:
+  suricata-reglas:
+  suricata-logs:
