@@ -9,7 +9,10 @@ Future<void> abrirConAncho(WidgetTester tester, double ancho) async {
   tester.view.devicePixelRatio = 1;
   addTearDown(tester.view.reset);
   await tester.pumpWidget(
-    ChangeNotifierProvider(create: (_) => Sesion(), child: const ZonaliaApp()),
+    ChangeNotifierProvider(
+      create: (_) => Sesion()..iniciar('token-de-prueba', 'admin'),
+      child: const ZonaliaApp(),
+    ),
   );
 }
 
