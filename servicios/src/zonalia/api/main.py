@@ -3,7 +3,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from zonalia.api import auth
+from zonalia.api import auth, paquetes
 from zonalia.api.bitacora_accesos import BitacoraAccesos, configurar_bitacora
 from zonalia.api.config import obtener_config
 
@@ -22,6 +22,7 @@ configurar_bitacora()
 app.add_middleware(BitacoraAccesos)
 
 app.include_router(auth.router)
+app.include_router(paquetes.router)
 
 
 @app.get("/health")
