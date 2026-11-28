@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
+import 'estado/sesion.dart';
 import 'ui/marco_adaptable.dart';
+import 'ui/pantallas/pantalla_login.dart';
+import 'ui/pantallas/pantalla_repartidor.dart';
 
 /// Color base de Zonalia. Material 3 arma el resto de la paleta a partir de él.
 const Color colorZonalia = Color(0xFF00695C);
@@ -24,7 +28,20 @@ class ZonaliaApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      home: const MarcoAdaptable(),
+      home: const Inicio(),
     );
+  }
+}
+
+/// Decide qué abrir según la sesión (#23): sin sesión, el login; con sesión, según el rol.
+class Inicio extends StatelessWidget {
+  const Inicio({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    final sesion = context.watch<Sesion>();
+    if (!sesion.iniciada) return const PantallaLogin();
+    if (sesion.rol == 'repartidor') return const PantallaRepartidor();
+    return const MarcoAdaptable();
   }
 }

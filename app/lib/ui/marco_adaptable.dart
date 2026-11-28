@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'boton_cerrar_sesion.dart';
+
 import 'pantallas/pantalla_seccion.dart';
 import 'seccion.dart';
 
@@ -29,7 +31,10 @@ class _MarcoAdaptableState extends State<MarcoAdaptable> {
 
     if (ancho < anchoRiel) {
       return Scaffold(
-        appBar: AppBar(title: Text(seccion.titulo)),
+        appBar: AppBar(
+          title: Text(seccion.titulo),
+          actions: const [BotonCerrarSesion()],
+        ),
         body: contenido,
         bottomNavigationBar: NavigationBar(
           selectedIndex: _indice,
@@ -43,7 +48,10 @@ class _MarcoAdaptableState extends State<MarcoAdaptable> {
     }
 
     return Scaffold(
-      appBar: AppBar(title: Text(seccion.titulo)),
+      appBar: AppBar(
+        title: Text(seccion.titulo),
+        actions: const [BotonCerrarSesion()],
+      ),
       body: Row(
         children: [
           NavigationRail(
